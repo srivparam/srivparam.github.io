@@ -13,7 +13,7 @@
 - matplotlib, seaborn, potly help visualize our data
 - collections used to make count
 
-'import spotipy
+'''import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import seaborn as sns
 import pandas as pd
@@ -24,7 +24,7 @@ from plotly import graph_objs as go
 init_notebook_mode(connected = True)
 import collections
 pip install plotly
-pip install spotipy'
+pip install spotipy'''
 
 ## Data Collection & Processing
 
