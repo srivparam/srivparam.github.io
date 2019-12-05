@@ -9,6 +9,19 @@
 
 ### Imports
 
+'import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from plotly.offline import init_notebook_mode, iplot
+from plotly import graph_objs as go
+init_notebook_mode(connected = True)
+import collections
+pip install plotly
+pip install spotipy'
+
 ## Data Collection & Processing
 
 ## On Repeat Playlists
