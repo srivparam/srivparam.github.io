@@ -8,6 +8,10 @@
 ### Our Goal
 
 ### Imports
+- spotipy allows us to work with Spotify data in Python
+- pandas and numpy organize and process our data
+- matplotlib, seaborn, potly help visualize our data
+- collections used to make count
 
 'import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
