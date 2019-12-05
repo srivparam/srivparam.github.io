@@ -29,7 +29,7 @@
 
 ## Hypothesis testing & machine learning
 
-### K-nearest neighbors
+### Clustering
 
 ### Hypothesis Testing
 
