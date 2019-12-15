@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Made_for_2</title>
+<title>Made_for_2 _final</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13901,6 +13901,14 @@ We plotted each audio feature for both user’s playlists. There are 6 graphs of
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The graphs above plot the average for each feature. They represent an estimate of what each playlists cluster center could be.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
@@ -14248,6 +14256,14 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>The graphs above plot the average for each playlist's features together. The space in between the black lines represents an estimate of the range that a feature of a song liked by both users would fall in.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Data-Analysis">Data Analysis<a class="anchor-link" href="#Data-Analysis">&#182;</a></h1>
 </div>
 </div>
@@ -14257,6 +14273,7 @@ if (outputEl) {{
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Machine-Learning">Machine Learning<a class="anchor-link" href="#Machine-Learning">&#182;</a></h2><h3 id="KMeans-Clustering">KMeans Clustering<a class="anchor-link" href="#KMeans-Clustering">&#182;</a></h3><p>On the surface level, this algorithm takes in 2 inputs, in our case, the top 50 songs from each user and runs a KMeans cluster algorithm, forming clusters for us to begin calculations. This is the best machine learning algorithm for our application because, as it is an unsupervised learning algorithm, the model will able to learn from the data, picking up patterns on its own.</p>
 <h3 id="KMeans-Clustering-with-2-clusters">KMeans Clustering with 2 clusters<a class="anchor-link" href="#KMeans-Clustering-with-2-clusters">&#182;</a></h3><p>The <a href="https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a">Kmeans</a> algorithm tries to partition a data set into K- predefined clusters, in our case, 2 clusters. Each data point belongs to only one group. To perform this, we concatenated the two user’s lists and ran passed it into the KMeans. Next, we passed each individual user’s table into the model. We found the centers of each cluster and found the median. This is the point that we’ll use for future calculations. We calculate the distances from this median to points around it. The radius that we defined was the distance from both our cluster centers divided by 2. If a data point resided in this radius, it was a good fit to be recommended. Out of the songs that resided in the radius, using the distance formula, ranked them from shortest to farthest: the shorter the distance from the median point, the more recommendable the song is. The dataframe shows the top songs within the radius that would be recommended to both users based on their 30 current, favorite songs on rotation.</p>
+<h3 id="Silhouette-Score">Silhouette Score<a class="anchor-link" href="#Silhouette-Score">&#182;</a></h3><p>The <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html#sklearn.metrics.silhouette_score">Silhouette Coefficient</a> is a measure of how similar an object is to its own cluster compared to other clusters. The score is bounded between -1 for incorrect clustering and +1 for highly dense clustering. Scores around zero indicate overlapping clusters. The score is higher when clusters are dense and well separated, which relates to a standard concept of a cluster.</p>
 
 </div>
 </div>
@@ -14359,6 +14376,15 @@ median:   [ 0.64585     0.589525   -7.5641125   0.07450125  0.210025    0.422152
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The silhouette_score is in between 0 and 1 so there is a slight overlap of the clusters.
+The median printed above is the center of the area of overlap between Rhea and Sriv's playlists.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14730,7 +14756,7 @@ median:   [ 0.64585     0.589525   -7.5641125   0.07450125  0.210025    0.422152
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion-about-our-data">Conclusion about our data<a class="anchor-link" href="#Conclusion-about-our-data">&#182;</a></h2><p>The top songs range from radius 0.304834 to 1.903180, as they are best fit to both users.</p>
+<h2 id="Conclusion-about-our-data">Conclusion about our data<a class="anchor-link" href="#Conclusion-about-our-data">&#182;</a></h2><p>The top songs range from radius 0.304834 to 1.903180, as they are best fit to both users. There is definite bias with our user playlist model because we used our own data. Therefore, we will explore this approach with genres/sub-genres, using Spotify's offical playlists.</p>
 
 </div>
 </div>
