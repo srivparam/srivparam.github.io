@@ -1,0 +1,25 @@
+name: Check Talk Like Paatti words
+
+on:
+  push:
+    paths:
+      - "talklikepaatti/words*.json"
+      - "tools/check_words.py"
+      - "tools/blocklist.txt"
+  pull_request:
+    paths:
+      - "talklikepaatti/words*.json"
+      - "tools/check_words.py"
+      - "tools/blocklist.txt"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check word lists
+        run: python3 tools/check_words.py talklikepaatti/words.json talklikepaatti/words-test.json
