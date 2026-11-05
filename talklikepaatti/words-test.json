@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "words": [
+    {
+      "id": "extra_pongal",
+      "tamil": "பொங்கல்",
+      "romanized": "pongal",
+      "sayItLike": [
+        "pong",
+        "gul"
+      ],
+      "english": "Pongal (harvest festival)",
+      "emoji": "🍯",
+      "category": "everyday",
+      "tip": "At Pongal, families shout \"Pongalo Pongal!\" when the sweet rice bubbles over."
+    },
+    {
+      "id": "extra_deepavali",
+      "tamil": "தீபாவளி",
+      "romanized": "theepaavali",
+      "sayItLike": [
+        "thee",
+        "paa",
+        "vuh",
+        "lee"
+      ],
+      "english": "Deepavali (festival of lights)",
+      "emoji": "🪔",
+      "category": "everyday"
+    },
+    {
+      "id": "extra_mazhai",
+      "tamil": "மழை",
+      "romanized": "mazhai",
+      "sayItLike": [
+        "muh",
+        "zhai"
+      ],
+      "english": "Rain",
+      "emoji": "🌧️",
+      "category": "everyday",
+      "tip": "Another word with the special 'zh' sound!"
+    }
+  ],
+  "removed": []
+}

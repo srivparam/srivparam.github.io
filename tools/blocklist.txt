@@ -1,0 +1,27 @@
+# Talk Like Paatti blocklist
+# One term per line, lowercase. Lines starting with # are ignored.
+# English-letter terms match whole words only; Tamil-script terms match anywhere.
+# Keep this file identical to tools/blocklist.txt in your website repository.
+# Your Tamil reviewer should add offensive Tamil words (in Tamil script AND in English letters).
+
+# English
+fuck
+shit
+bitch
+bastard
+asshole
+dick
+cunt
+slut
+whore
+damn
+sex
+porn
+nude
+naked
+kill
+suicide
+drunk
+drugs
+
+# Tamil (add in Tamil script and in English letters)
